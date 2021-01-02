@@ -3,11 +3,21 @@
   padding: 0;
 }
 
+/* 전체 페이지의 높이를 가지기 위함 */
+html,
+body {
+  height: 100%;
+}
+
 header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
+}
+
+nav {
+  display: flex;
 }
 
 .nav-mail,
@@ -52,27 +62,89 @@ nav > a:hover {
   color: white;
 }
 
-nav {
+main {
+  height: calc(100% - 50px);
   display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.main-wrap {
+  margin-top: 100px;
 }
 
 .google-logo {
-  width: 400px;
-  height: 200px;
-  margin-top: 100px;
+  width: 320px;
+  height: 112px;
 }
 
 .input-box {
   border: 1px solid gray;
-  border-radius: 10px;
-  width: 250px;
+  border-radius: 30px;
+  width: 100%;
+  height: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  cursor: text;
+}
+.input-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .search-icon {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+input {
+  border: none;
+  width: 87%;
+  outline: none;
+  padding-left: 5px;
+}
+.input-btn-micro {
+  border: none;
+  background-color: white;
 }
 
 .micro-icon {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
+}
+.main-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.main-btn-wrap > button {
+  border: 1px solid #f8f9fa;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.main-btn-wrap > button:hover {
+  border: 1px solid lightgray;
+}
+
+.google-service {
+  display: flex;
+  justify-content: center;
+}
+
+.google-service > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: blue;
+}
+.google-service > span {
+  margin-right: 5px;
+}
+.google-service > a:hover {
+  text-decoration: underline;
 }
